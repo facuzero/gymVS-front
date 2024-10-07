@@ -19,7 +19,7 @@ export default function RootLayout({
    */ return (
     <html lang='en'>
       <body>
-        <header className='flex flex-col items-center'>
+        <header className='flex flex-col items-center my-5'>
           <h2>Gym Victor</h2>
           <img src={gymLogo.src} alt='header image' width={80} height={80} />
           <nav className='w-full flex justify-around'>
