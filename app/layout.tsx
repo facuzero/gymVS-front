@@ -33,10 +33,11 @@ export default function RootLayout({
             <Link href={'/dashboard/customers'}>customers</Link>
             <Link href={'/dashboard/invoices'}>invoices</Link> */}
             <Link href={'/login'}>Inicia sesión</Link>
+            <Link href={'/user'}>Cargar nuevo cliente</Link>
           </nav>
         </header>
         {children}
-        <footer className='w-full absolute bottom-0'>footer </footer>
+        <footer className='w-full'>footer </footer>
       </body>
     </html>
   );
