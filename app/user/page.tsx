@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 
 const healthConditions = [
   'Patología de columna',
@@ -38,7 +38,7 @@ const CheckboxField = ({ label, id }: { label: string; id: string }) => (
 
 const User = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
-  const newClient = useState({
+  /* const newClient = useState({
     name: '',
     lastName: '',
     address: '',
@@ -52,7 +52,7 @@ const User = () => {
     practiceSports: false,
     imgProfile: 'urlImagen',
     subscription: new Date(),
-  });
+  }); */
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
