@@ -37,7 +37,7 @@ const CheckboxField = ({ label, id }: { label: string; id: string }) => (
 );
 
 const User = () => {
-  const formRef = useRef(null);
+  const formRef = useRef<HTMLFormElement | null>(null);
   const newClient = useState({
     name: '',
     lastName: '',
@@ -54,13 +54,13 @@ const User = () => {
     subscription: new Date(),
   });
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     if (formRef.current) {
       const formData: { [key: string]: string | boolean } = {};
       Array.from(formRef.current.elements).forEach((element) => {
-        if (element.id) {
-          const input = element;
+        if ((element as HTMLInputElement).id) {
+          const input = element as HTMLInputElement;
           if (input.type === 'checkbox') {
             formData[input.id] = input.checked;
           } else {
